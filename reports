@@ -1,5 +1,5 @@
 oracle apex Reports:
 interactive Reports
 classic Reports
-reflow Reports 
+reflow Reports (static report no changes or filter apply )
 column toggle Reports (have only filter to hide or unhide columns)
