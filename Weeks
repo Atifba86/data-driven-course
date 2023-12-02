@@ -1,13 +1,11 @@
-data Scrapping-> data analysis-> data engineering.
-Python lib: import beautifulsoup
-Data Cleaning in Pandas
-Python CSV files - with PANDAS
-Combine Excel Files With Python (And pandas)
-postgresql
-SQL for Data Science
+#data Scrapping-> data analysis-> data engineering.
+#Python lib: import beautifulsoup
+#Data Cleaning in Pandas
+#Python CSV files - with PANDAS
+#Combine Excel Files With Python (And pandas)
+#postgresql
 
-
--------------------------------------------------------------
+#------------------------------------------------------------
 
 >>> re.findall("ab*c", "abcd")
 ['abc']
@@ -20,4 +18,4 @@ SQL for Data Science
 
 >>> re.findall("ab*c", "abdc")
 []
---------------------------------------------------------------
+#-------------------------------------------------------------
