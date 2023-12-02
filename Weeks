@@ -8,6 +8,7 @@
 #------------------------------------------------------------
 content = driver.page_source
 soup = BeautifulSoup(content)
+
 for a in soup.findAll('a',href=True, attrs={'class':'_31qSD5'}):
     name=a.find('div', attrs={'class':'_3wU53n'})
     price=a.find('div', attrs={'class':'_1vC4OE _2rQ-NK'})
