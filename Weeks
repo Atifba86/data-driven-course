@@ -5,6 +5,9 @@
 #Combine Excel Files With Python (And pandas)
 #postgresql
 
+import pandas as pd
+
+
 #------------------------------------------------------------
 content = driver.page_source
 soup = BeautifulSoup(content)
