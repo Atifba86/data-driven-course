@@ -9,6 +9,7 @@ import pandas as pd
 
 def load_data():
     hn_stories = pd.read_csv("hn_stories.csv")
+    
 #------------------------------------------------------------
 content = driver.page_source
 soup = BeautifulSoup(content)
