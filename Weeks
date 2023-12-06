@@ -45,3 +45,5 @@ Data['Average Tank Temperature (deg F)'] = (1./8.) * (Data['T1 (deg F)'] + Data[
 
 Data['Previous Average Tank Temperature (deg F)'] = Data['Average Tank Temperature (deg F)'].shift(periods = 1)
 
+
+Data.loc[0, 'Previous Average Tank Temperature (deg F)'] = 72.0
