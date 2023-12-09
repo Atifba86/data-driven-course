@@ -17,9 +17,6 @@ def load_data():
 
 
 
-
-
-
 #------------------------------------------------------------
 content = driver.page_source
 soup = BeautifulSoup(content)
