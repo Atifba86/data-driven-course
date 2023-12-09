@@ -41,3 +41,21 @@ ratings.append(rating.text)
 []
 
 #-------------------------------------------------------------
+
+
+
+Data['Average Tank Temperature (deg F)'] = (1./8.) * (Data['T1 (deg F)'] + Data['T2 (deg F)'] + Data['T3 (deg F)'] + Data['T4 (deg F)'] + Data['T5 (deg F)'] + Data['T6 (deg F)'] + Data['T7 (deg F)'] + Data['T8 (deg F)'])
+
+Data['Previous Average Tank Temperature (deg F)'] = Data['Average Tank Temperature (deg F)'].shift(periods = 1)
+
+Data.loc[0, 'Previous Average Tank Temperature (deg F)'] = 72.0
+
+
+
+a,b([1,10,2,5])
+
+values.sortby((a,b)=>a and b)
+return (a,b[1,2,5,10]) ---sort the same array
+
+tosorted(a,b=> a and b)
+return new([1,2,5,10]) --- return you a new array and sort the new array as well
