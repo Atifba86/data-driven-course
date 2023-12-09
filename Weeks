@@ -12,9 +12,6 @@ def load_data():
     hn_stories.columns = ['sublesson_time', 'upvotes', 'url', 'headline']
     return(hn_stories)
 
-
-
-
 #------------------------------------------------------------
 content = driver.page_source
 soup = BeautifulSoup(content)
