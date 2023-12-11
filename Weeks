@@ -70,8 +70,7 @@ return new([1,2,5,10]) --- return you a new array and sort the new array as well
         print("File Not Found!")
        
     # How many rows to take to test data?
-    num_test_rows = round(df.shape[0] * test_percent)
-    print(num_test_rows)
+
    
     # Split the data into training and testing data
     test = df.sample(n=num_test_rows, random_state=random_state)
