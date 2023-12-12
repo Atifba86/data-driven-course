@@ -20,7 +20,6 @@ for a in soup.findAll('a',href=True, attrs={'class':'_31qSD5'}):
     products.append(name.text)
 prices.append(price.text)
 ratings.append(rating.text) 
-
 #----------------------------------------------------------------
 >>> re.findall("ab*c", "abcd")
 ['abc']
