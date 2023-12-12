@@ -55,7 +55,7 @@ values.sortby((a,b)=>a and b)
 return (a,b[1,2,5,10]) ---sort the same array
 
 tosorted(a,b=> a and b)
-<<<<<<< HEAD
+
 return new([1,2,5,10]) --- return you a new array and sort the new array as well
 
 
@@ -99,4 +99,3 @@ return new([1,2,5,10]) --- return you a new array and sort the new array as well
     print("All datasets have been generated and are available at "+ CLEAN_DATASET_LOCATION + DATASET_NAME)
 =======
 return new([1,2,5,10]) --- return new array
->>>>>>> 87124752b9672a425981193e74ab75d4185ebb78
