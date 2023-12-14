@@ -101,10 +101,8 @@ export ZONE_2=us-east1
 curl -LO raw.githubusercontent.com/quiccklabs/Labs_solutions/master/Virtual%20Private%20Networks%20VPN/quicklab.sh
 sudo chmod +x quicklab.sh
 ./quicklab.sh
+
 -------------------------------------------------------------------------------------------------------------------
-
-
-
 
 
 
