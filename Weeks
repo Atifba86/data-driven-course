@@ -47,7 +47,7 @@ values.sortby((a,b)=>a and b)
 return (a,b[1,2,5,10]) ---sort the same array
 
 tosorted(a,b=> a and b)
-<<<<<<< HEAD
+
 return new([1,2,5,10]) --- return new array
 
 =======
@@ -99,12 +99,4 @@ return new([1,2,5,10]) --- return new array
 
 
 
--------------------------------------------------------------------------------------------------------------------
-export ZONE_1=us-central1
-export ZONE_2=us-east1
-curl -LO raw.githubusercontent.com/quiccklabs/Labs_solutions/master/Virtual%20Private%20Networks%20VPN/quicklab.sh
-sudo chmod +x quicklab.sh
-./quicklab.sh
 
-------------------------------------------------------------------------------------------------------------------
->>>>>>> 53fd3117e3708948341e139f35d713431c40dc6e
