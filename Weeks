@@ -20,19 +20,7 @@ for a in soup.findAll('a',href=True, attrs={'class':'_31qSD5'}):
     products.append(name.text)
 prices.append(price.text)
 ratings.append(rating.text) 
-#----------------------------------------------------------------
->>> re.findall("ab*c", "abcd")
-['abc']
 
->>> re.findall("ab*c", "acc")
-['ac']
-
->>> re.findall("ab*c", "abcac")
-['abc', 'ac']
-
->>> re.findall("ab*c", "abdc")
-[]
-#-------------------------------------------------------------
 
 Data['Average Tank Temperature (deg F)'] = (1./8.) * (Data['T1 (deg F)'] + Data['T2 (deg F)'] + Data['T3 (deg F)'] + Data['T4 (deg F)'] + Data['T5 (deg F)'] + Data['T6 (deg F)'] + Data['T7 (deg F)'] + Data['T8 (deg F)'])
 Data['Previous Average Tank Temperature (deg F)'] = Data['Average Tank Temperature (deg F)'].shift(periods = 1)
