@@ -35,48 +35,45 @@ ratings.append(rating.text)
 #-------------------------------------------------------------
 
 Data['Average Tank Temperature (deg F)'] = (1./8.) * (Data['T1 (deg F)'] + Data['T2 (deg F)'] + Data['T3 (deg F)'] + Data['T4 (deg F)'] + Data['T5 (deg F)'] + Data['T6 (deg F)'] + Data['T7 (deg F)'] + Data['T8 (deg F)'])
-
 Data['Previous Average Tank Temperature (deg F)'] = Data['Average Tank Temperature (deg F)'].shift(periods = 1)
-
 Data.loc[0, 'Previous Average Tank Temperature (deg F)'] = 72.0
-
 
 a,b([1,10,2,5])
 
- DATASET_NAME = file_name[:-4]
+DATASET_NAME = file_name[:-4]
     
     # Load the file
-    try:
+try:
         df = pd.read_csv(RAW_DATASET_LOCATION + file_name)
-    except:
+except:
         print("File Not Found!")
        
     # How many rows to take to test data?
-    num_test_rows = round(df.shape[0] * test_percent)
-    print(num_test_rows)
+num_test_rows = round(df.shape[0] * test_percent)
+print(num_test_rows)
    
     # Split the data into training and testing data
-    test = df.sample(n=num_test_rows, random_state=random_state)
-    train = df.drop(list(test.index)).reset_index(drop=True)
-    test = test.reset_index(drop=True)
+test = df.sample(n=num_test_rows, random_state=random_state)
+train = df.drop(list(test.index)).reset_index(drop=True)
+test = test.reset_index(drop=True)
 
-    print("Train Data Shape:", train.shape)
-    print("Test Data Shape:", test.shape)
+print("Train Data Shape:", train.shape)
+print("Test Data Shape:", test.shape)
 
-    # Store Target values of test separately and remove them of the main dataframe
-    test_target = test[target].values
-    test = test.drop(target, axis=1)
+# Store Target values of test separately and remove them of the main dataframe
+test_target = test[target].values
+test = test.drop(target, axis=1)
 
-    # Make the submission dataframe
-    # This is the final values with which we have to
-    # compare our predictions on the test dataset
-    solution = pd.DataFrame({target:test_target})
-    
-    os.mkdir(CLEAN_DATASET_LOCATION + DATASET_NAME)
-    
-    # Store the files back as train.csv, test.csv and submission.csv
-    train.to_csv(CLEAN_DATASET_LOCATION + DATASET_NAME + "/train.csv", index=False)
-    test.to_csv(CLEAN_DATASET_LOCATION + DATASET_NAME + "/test.csv", index=False)
-    solution.to_csv(CLEAN_DATASET_LOCATION + DATASET_NAME + "/test_solution.csv", index=False)
-    print("All datasets have been generated and are available at "+ CLEAN_DATASET_LOCATION + DATASET_NAME)
+# Make the submission dataframe
+# This is the final values with which we have to
+# compare our predictions on the test dataset
+solution = pd.DataFrame({target:test_target})
+
+os.mkdir(CLEAN_DATASET_LOCATION + DATASET_NAME)
+
+# Store the files back as train.csv, test.csv and submission.csv
+train.to_csv(CLEAN_DATASET_LOCATION + DATASET_NAME + "/train.csv", index=False)
+test.to_csv(CLEAN_DATASET_LOCATION + DATASET_NAME + "/test.csv", index=False)
+solution.to_csv(CLEAN_DATASET_LOCATION + DATASET_NAME + "/test_solution.csv", index=False)
+print("All datasets have been generated and are available at "+ CLEAN_DATASET_LOCATION + DATASET_NAME)
 
