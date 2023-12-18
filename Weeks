@@ -50,9 +50,6 @@ return (a,b[1,2,5,10]) ---sort the same array
 
 
 
-
-
-
  DATASET_NAME = file_name[:-4]
     
     # Load the file
