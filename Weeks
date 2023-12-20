@@ -68,15 +68,4 @@ test = test.reset_index(drop=True)
 print("Train Data Shape:", train.shape)
 print("Test Data Shape:", test.shape)
 
-# Store Target values of test separately and remove them of the main dataframe
-test_target = test[target].values
-test = test.drop(target, axis=1)
-
-# Make the submission dataframe
-# This is the final values with which we have to
-# compare our predictions on the test dataset
-solution = pd.DataFrame({target:test_target})
-
-os.mkdir(CLEAN_DATASET_LOCATION + DATASET_NAME)
-
 
