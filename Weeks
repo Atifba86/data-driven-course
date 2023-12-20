@@ -64,8 +64,3 @@ print(num_test_rows)
 test = df.sample(n=num_test_rows, random_state=random_state)
 train = df.drop(list(test.index)).reset_index(drop=True)
 test = test.reset_index(drop=True)
-
-print("Train Data Shape:", train.shape)
-print("Test Data Shape:", test.shape)
-
-
