@@ -13,5 +13,3 @@ print(soup.prettify)
 
 
 
-
-
