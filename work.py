@@ -8,4 +8,4 @@ r = requests.get(url)
 
 soup = BeautifulSoup(r.content)
 
-print(soup.prettify)
+print(soup.prettify) 
