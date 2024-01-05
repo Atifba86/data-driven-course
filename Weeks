@@ -61,5 +61,3 @@ train = df.drop(list(test.index)).reset_index(drop=True)
 test = test.reset_index(drop=True)
 
 
-
-
