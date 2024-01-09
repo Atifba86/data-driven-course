@@ -12,5 +12,3 @@ print(soup.prettify)
 
 
 
-
-
