@@ -9,3 +9,5 @@ r = requests.get(url)
 soup = BeautifulSoup(r.content)
 
 print(soup.prettify) 
+
+
